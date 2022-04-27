@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     min-width: 200px;
-    height: 2160px;
+    height: 1600px;
 }
 
 #background {
@@ -10,8 +10,12 @@ body {
     background-image: url("/images/background1.jpg");
     background-size: cover;
     position: absolute;
+    top: 0%;
     opacity: 0.75;
-    margin-top: 48px;
+    margin: 0px;
+    padding: 0px;
+    /* margin-top: -6px; 
+    */
 }
 
 #title-box {
@@ -127,18 +131,71 @@ body {
 }
 
 #features {
-    height: 600px;
+    height: 500px;
     width: 80%;
     position: relative;
     border-color: rgb(3, 3, 3);
-    padding: 10px;
     z-index: 5;
-    border-width: 5px;
-    border-style: solid;
+    /* border-width: 5px;
+    border-style: solid; */
+    padding: 10px;
     margin: auto;
-    top: 40%
+    top: 50%
 }
 
 .feature-boxes {
+    height: 375px;
+    width: 300px;
+    border-radius: 40px;
+    border-width: 5px;
+    margin: 40px;
+    border-style: solid;
+    float: left;
+    position: relative;
+}
 
+#f-title-box {
+    position: relative;
+    top: 50%;
+}
+
+#feature-title {
+    text-align: center;
+    font-size: 80px;
+    font-family: Apple Chancery, cursive;
+    text-shadow: 2px 2px 8px rgb(0, 0, 0);
+    z-index: 6;
+}
+
+#feature-title::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+#feature-title:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#feature-title::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: hsl(200 100% 80%);
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+
+#f-box1 {
+    left: 0.5%;
+}
+
+#f-box2 {
+    left: 1%;
+}
+
+#f-box3 {
+    left: 2%;
 }
