@@ -72,3 +72,21 @@ ReactDOM.render(
     <App />,
     document.getElementById("root")
 )  
+
+let ScrollHeight = window.pageYOffset;
+let scrolling = false;
+
+window.onscroll = () => {
+
+    if (scrolling || window.pageYOffset > 800 || window.pageYOffset < ScrollHeight) {
+        ScrollHeight = window.pageYOffset;
+        return ;
+    }
+
+    window.scrollTo({top: 800, behavior: "smooth"});
+    scrolling = true;
+    ScrollHeight = window.pageYOffset;
+    setTimeout(() => {
+        scrolling = false;
+    }, 1000);
+}
