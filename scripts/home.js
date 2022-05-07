@@ -73,7 +73,7 @@ ReactDOM.render(
     document.getElementById("root")
 )  
 
-let ScrollHeight = window.pageYOffset;
+/* let ScrollHeight = window.pageYOffset;
 let scrolling = false;
 
 window.onscroll = () => {
@@ -89,4 +89,4 @@ window.onscroll = () => {
     setTimeout(() => {
         scrolling = false;
     }, 1000);
-}
+} */
